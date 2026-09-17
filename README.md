@@ -1,14 +1,14 @@
 # Sancte Narratio — demo media
 
-Public progressive assets for the 16:15 funding demo (not app source).
+Public assets for the 16:15 funding demo.
 
 ## Layout
 
 ```
-videos/trailer-{id}.mp4          H.264 ~1080p CRF 20, +faststart
-backdrops/backdrop-{id}.jpg      high-res hero / details
-thumbs/upcoming/poster-{id}.jpg  poster rail
-thumbs/featured/…                featured stills
+videos/                 H.264 ~1080p CRF 20 (+faststart)
+backdrops/              web-tuned JPEGs (hero / details) — app URLs
+thumbs/                 web-tuned posters / featured
+masters/                full-quality JPEG originals (not referenced by app)
 ```
 
 ## URLs
@@ -16,5 +16,3 @@ thumbs/featured/…                featured stills
 ```
 https://raw.githubusercontent.com/studiobrain/sancte-narratio-demo-media/main/<path>
 ```
-
-App wiring: `src/catalog/1615-manifest.ts` → `demoMediaUrl(...)`.
