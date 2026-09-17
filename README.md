@@ -1,15 +1,20 @@
-# Sancte Narratio — demo trailers
+# Sancte Narratio — demo media
 
-Public progressive MP4s for the 16:15 funding demo (not app source).
+Public progressive assets for the 16:15 funding demo (not app source).
 
-H.264 ~1080p CRF 20, `+faststart` for quick first-frame.
+## Layout
+
+```
+videos/trailer-{id}.mp4          H.264 ~1080p CRF 20, +faststart
+backdrops/backdrop-{id}.jpg      high-res hero / details
+thumbs/upcoming/poster-{id}.jpg  poster rail
+thumbs/featured/…                featured stills
+```
 
 ## URLs
 
 ```
-https://raw.githubusercontent.com/studiobrain/sancte-narratio-demo-media/main/videos/<file>.mp4
+https://raw.githubusercontent.com/studiobrain/sancte-narratio-demo-media/main/<path>
 ```
 
-(jsDelivr rejects files &gt; ~20MB — use raw GitHub URLs.)
-
-App wiring: `src/catalog/1615-manifest.ts` → `demoTrailerUrl(...)`.
+App wiring: `src/catalog/1615-manifest.ts` → `demoMediaUrl(...)`.
