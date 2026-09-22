@@ -1,34 +1,30 @@
-# Sancte Narratio — demo media
+# Demo media (per project)
 
-Public assets for pitch demos. Two **projects** share this repo; each has its own top-level folder.
+Public assets for pitch demos. **No shared root media** — each project owns its folder.
 
 ## Layout
 
 ```
-1615/                   The 16:15 Project (live demo)
+1615/                   The 16:15 Project
   videos/               H.264 ~1080p CRF 20 (+faststart)
-  backdrops/            web-tuned JPEGs (hero / details) — app URLs
-  thumbs/               web-tuned posters / featured
-  masters/              full-quality JPEG originals (not referenced by app)
+  backdrops/            web-tuned JPEGs (hero / details)
+  thumbs/featured/
+  thumbs/upcoming/
+  masters/              full-quality originals (not referenced by app)
 
-sanctenarratio/         Sancte Narratio (assets TBD)
+sanctenarratio/         Sancte Narratio
   videos/
   backdrops/
-  thumbs/
+  thumbs/featured/
+  thumbs/upcoming/
   masters/
 ```
-
-**Legacy root** `videos/`, `backdrops/`, `thumbs/`, `masters/` remain for the currently deployed 1615 build (root-level URLs). Do not delete them until that subdomain is redeployed against `1615/` paths.
 
 ## URLs
 
 ```
-https://raw.githubusercontent.com/studiobrain/sancte-narratio-demo-media/main/1615/<path>
-https://raw.githubusercontent.com/studiobrain/sancte-narratio-demo-media/main/sanctenarratio/<path>
+https://raw.githubusercontent.com/studiobrain/sancte-narratio-demo-media/<sha>/1615/<path>
+https://raw.githubusercontent.com/studiobrain/sancte-narratio-demo-media/<sha>/sanctenarratio/<path>
 ```
 
-Legacy (live 1615 until cutover):
-
-```
-https://raw.githubusercontent.com/studiobrain/sancte-narratio-demo-media/main/<path>
-```
+Pin the commit SHA in each app project’s `media.ts` after uploads so URLs stay cache-stable.
